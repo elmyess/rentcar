@@ -1,0 +1,10 @@
+Array
+(
+    [car_id] => 2
+    [full_name] => Elamri
+    [email] => elamriyassine474@gmail.com
+    [phone] => 0783313090
+    [pickup_location] => Tit Mellil
+    [pickup_date] => 2025-10-29
+    [return_date] => 2025-10-30
+)
