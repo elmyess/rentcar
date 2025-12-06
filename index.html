@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elayadi Prestige Car</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="#" class="logo" data-page="home">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                   <img src="logo.png" alt=""> ELAYADI PRESTIGE CAR
+                </a>
+                
+                <nav class="nav">
+                    <a href="#" class="nav-link active" data-page="home">Accueil</a>
+                    <a href="#" class="nav-link" data-page="fleet">Notre Flotte</a>
+                    <a href="#" class="nav-link" data-page="reservation">Réservation</a>
+                    <a href="#" class="nav-link" data-page="contact">Contact</a>
+                </nav>
+                
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-actions">
+                    <a href="https://wa.me/212660668681" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-phone"></i> +212660668681
+                    </a>
+                    <a href="#" class="btn btn-primary" data-page="reservation">
+                        Réserver Maintenant <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <nav class="mobile-nav">
+                <a href="#" class="nav-link active" data-page="home">Accueil</a>
+                <a href="#" class="nav-link" data-page="fleet">Notre Flotte</a>
+                <a href="#" class="nav-link" data-page="reservation">Réservation</a>
+                <a href="#" class="nav-link" data-page="contact">Contact</a>
+                <div class="mobile-actions">
+                    <a href="tel:+212660668681" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> +212660668681
+                    </a>
+                    <a href="#" class="btn btn-primary" data-page="reservation">
+                        Réserver maintenant <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Page -->
+            <section id="home-page" class="page active">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <div class="hero-background"></div>
+                    <div class="hero-content" aria-hidden="true">
+                        <!-- Texte du hero supprimé à la demande -->
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <section class="section section-light">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Pourquoi choisir Elayadi Prestige Car</h2>
+                            <p class="section-subtitle">Nous offrons un service exceptionnel et des véhicules haut de gamme pour rendre votre trajet inoubliable</p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="feature-title">Assurance Premium</h3>
+                                <p class="feature-description">Couverture complète pour une tranquillité d'esprit pendant votre location.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-concierge-bell"></i>
+                                </div>
+                                <h3 class="feature-title">Service Concierge</h3>
+                                <p class="feature-description">Notre équipe est disponible 24h/24 et 7j/7 pour répondre à vos demandes.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h3 class="feature-title">Modèles Récents</h3>
+                                <p class="feature-description">Notre flotte est régulièrement mise à jour avec les derniers modèles de luxe et de performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Cars Section -->
+                <section class="section section-dark">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Véhicules en vedette</h2>
+                            <p class="section-subtitle">Découvrez nos véhicules de luxe et de performance les plus recherchés</p>
+                        </div>
+                        <div class="car-grid" id="featured-cars">
+                            <!-- Cars will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Fleet Page -->
+            <section id="fleet-page" class="page">
+                <section class="section section-light">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Notre flotte complète</h2>
+                            <p class="section-subtitle">Choisissez parmi notre vaste collection de véhicules premium</p>
+                        </div>
+                        <div class="car-grid" id="all-cars">
+                            <!-- Cars will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Reservation Page -->
+            <section id="reservation-page" class="page">
+                <section class="section section-light">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Réservez votre véhicule</h2>
+                            <p class="section-subtitle">Remplissez le formulaire ci-dessous pour réserver le véhicule choisi</p>
+                        </div>
+
+                        <div class="reservation">
+                            <div class="reservation-header">
+                                <h3 class="reservation-title">Détails de la réservation</h3>
+                                <p class="reservation-subtitle">Veuillez indiquer vos coordonnées pour finaliser la réservation</p>
+                            </div>
+                            <form id="reservation-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label class="form-label" for="selected-car">Véhicule sélectionné</label>
+                                        <input type="text" id="selected-car" class="form-input" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="full-name">Nom complet</label>
+                                        <input type="text" id="full-name" class="form-input" placeholder="Entrez votre nom complet" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Adresse e-mail</label>
+                                        <input type="email" id="email" class="form-input" placeholder="Entrez votre adresse e-mail" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone">Numéro de téléphone</label>
+                                        <input type="tel" id="phone" class="form-input" placeholder="Entrez votre numéro de téléphone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="pickup-location">Lieu de prise en charge</label>
+                                        <select id="pickup-location" class="form-select" required>
+                                            <option value="">Sélectionnez un lieu</option>
+                                            <option value="Tit Mellil">Tit Mellil</option>
+                                            <option value="Casablanca">Casablanca</option>
+                                            <option value="Mohammedia">Mohammedia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date-row">
+                                        <div>
+                                            <label class="form-label" for="pickup-date">Date de prise en charge</label>
+                                            <input type="date" id="pickup-date" class="form-input" required>
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="return-date">Date de retour</label>
+                                            <input type="date" id="return-date" class="form-input" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <input type="hidden" id="selected-car-id" name="car_id">
+                                
+                                <button type="submit" class="btn btn-submit">
+                                    Confirmer la réservation <i class="fas fa-check"></i>
+                                </button>
+                                <div style="text-align: center; margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                                    <i class="fas fa-money-bill-wave"></i> Paiement en cash à la livraison du véhicule
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Contact Page -->
+            <section id="contact-page" class="page">
+                <section class="section section-light">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Contactez-nous</h2>
+                            <p class="section-subtitle">Contactez notre équipe pour toute demande</p>
+                        </div>
+
+                        <div class="reservation">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <h3><i class="fas fa-map-marker-alt"></i> Notre localisation</h3>
+                                    <p>Tit Mellil</p>
+                                </div>
+                                <div class="form-group">
+                                    <h3><i class="fas fa-phone"></i> Téléphone</h3>
+                                    <p>+212660668681</p>
+                                </div>
+                                <div class="form-group">
+                                    <h3><i class="fas fa-envelope"></i> E-mail</h3>
+                                    <p>elayadiprestigecar@gmail.com</p>
+                                </div>
+                                <div class="form-group">
+                                    <h3><i class="fas fa-clock"></i> Horaires</h3>
+                                    <p>Lundi - Vendredi : 9h - 19h<br>Samedi : 10h - 17h<br>Dimanche : Fermé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Elayadi Prestige Car</h3>
+                    <p>Service de location de voitures premium proposant des véhicules de luxe pour une clientèle exigeante.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/elayadi.prestige.car?locale=fr_FR" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elayadiprestigecar/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/212660668681" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Accueil</a></li>
+                        <li><a href="#" data-page="fleet">Notre Flotte</a></li>
+                        <li><a href="#" data-page="reservation">Réservation</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Locations de luxe</a></li>
+                        <li><a href="#">Leasing professionnel</a></li>
+                        <li><a href="#">Locations longue durée</a></li>
+                        <li><a href="#">Prise en charge aéroport</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Assistance</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Support client</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Elayadi Prestige Car. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212660668681" class="whatsapp-float" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        let cars = [];
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCarsFromAPI();
+            setupEventListeners();
+            setupDateValidation();
+        });
+
+        // Charger les voitures depuis l'API
+        async function loadCarsFromAPI() {
+            try {
+                const response = await fetch('/elayadi-prestigecar/back-end/api/cars.php');
+                const data = await response.json();
+
+                if (data.cars) {
+                    cars = data.cars.map(car => ({
+                        id: car.id,
+                        name: car.name,
+                        price: car.price_per_day,
+                        image: car.image,
+                        seats: car.seats,
+                        fuel: car.fuel_type,
+                        transmission: car.transmission,
+                        featured: car.featured == 1
+                    }));
+                    loadCars();
+                }
+            } catch (error) {
+                console.error('Erreur lors du chargement des voitures:', error);
+                // Fallback vers les données statiques en cas d'erreur
+                loadFallbackCars();
+            }
+        }
+
+        // Fonction pour rafraîchir les voitures (appelée depuis l'extérieur si nécessaire)
+        window.refreshCars = function() {
+            loadCarsFromAPI();
+        };
+
+        // Charger les voitures
+        function loadCars() {
+            const featuredGrid = document.getElementById('featured-cars');
+            const allGrid = document.getElementById('all-cars');
+
+            featuredGrid.innerHTML = '';
+            allGrid.innerHTML = '';
+
+            cars.forEach(car => {
+                const carCard = createCarCard(car);
+                allGrid.appendChild(carCard.cloneNode(true));
+
+                if (car.featured) {
+                    featuredGrid.appendChild(carCard);
+                }
+            });
+        }
+
+        // Données de secours en cas d'erreur API
+        function loadFallbackCars() {
+            cars = [
+                {
+                    id: 1,
+                    name: "Renault Clio 5",
+                    price: 300,
+                    image: "images/clio5.png",
+                    seats: 5,
+                    fuel: "Diesel",
+                    transmission: "Manuelle/Automatique",
+                    featured: true
+                },
+                {
+                    id: 2,
+                    name: "Dacia Logan",
+                    price: 300,
+                    image: "images/logan.png",
+                    seats: 5,
+                    fuel: "Diesel",
+                    transmission: "Manuelle",
+                    featured: true
+                },
+                {
+                    id: 3,
+                    name: "Hyundai Tucson",
+                    price: 500,
+                    image: "images/tucson.jpg",
+                    seats: 5,
+                    fuel: "Essence",
+                    transmission: "Automatique",
+                    featured: true
+                }
+            ];
+            loadCars();
+        }
+
+        // Créer une carte voiture
+        function createCarCard(car) {
+            const card = document.createElement('div');
+            card.className = 'car-card';
+            card.innerHTML = `
+                <img src="${car.image}" alt="${car.name}" class="car-image" onerror="this.src='images/car-placeholder.jpg'">
+                <div class="car-content">
+                    <div class="car-header">
+                        <h3 class="car-name">${car.name}</h3>
+                        <div class="car-price">${car.price} DH<span>/jour</span></div>
+                    </div>
+                    <div class="car-features">
+                        <div class="car-feature">
+                            <i class="fas fa-user"></i> ${car.seats} places
+                        </div>
+                        <div class="car-feature">
+                            <i class="fas fa-gas-pump"></i> ${car.fuel}
+                        </div>
+                        <div class="car-feature">
+                            <i class="fas fa-cogs"></i> ${car.transmission}
+                        </div>
+                    </div>
+                    <button class="btn btn-primary select-car" data-car-id="${car.id}" data-car-name="${car.name}">
+                        Sélectionner ce véhicule <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+            return card;
+        }
+
+        // Configuration des événements
+        function setupEventListeners() {
+            // Navigation
+            document.querySelectorAll('.nav-link, .logo, .btn[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    navigateToPage(targetPage);
+                });
+            });
+
+            // Sélection de voiture
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('select-car')) {
+                    const button = e.target.closest('.select-car');
+                    const carId = button.getAttribute('data-car-id');
+                    const carName = button.getAttribute('data-car-name');
+                    selectCar(carId, carName);
+                }
+            });
+
+            // Menu mobile
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            mobileToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Soumission du formulaire
+            document.getElementById('reservation-form').addEventListener('submit', handleReservation);
+        }
+
+        // Navigation entre pages
+        function navigateToPage(pageName) {
+            // Masquer toutes les pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Afficher la page cible
+            document.getElementById(`${pageName}-page`).classList.add('active');
+
+            // Mettre à jour la navigation active
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.nav-link[data-page="${pageName}"]`).classList.add('active');
+
+            // Fermer le menu mobile
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle i');
+            if (mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                mobileToggle.classList.remove('fa-times');
+                mobileToggle.classList.add('fa-bars');
+            }
+
+            // Scroll vers le haut
+            window.scrollTo(0, 0);
+        }
+
+        // Sélectionner une voiture
+        function selectCar(carId, carName) {
+            document.getElementById('selected-car-id').value = carId;
+            document.getElementById('selected-car').value = carName;
+            navigateToPage('reservation');
+        }
+
+        // Validation des dates
+        function setupDateValidation() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('pickup-date').min = today;
+            document.getElementById('return-date').min = today;
+
+            document.getElementById('pickup-date').addEventListener('change', function() {
+                document.getElementById('return-date').min = this.value;
+            });
+        }
+
+        // Gestion de la réservation - VERSION CORRIGÉE
+async function handleReservation(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('.btn-submit');
+    const originalText = submitBtn.innerHTML;
+    
+    // Désactiver le bouton
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Traitement...';
+    submitBtn.disabled = true;
+
+    try {
+        // Récupérer les données du formulaire
+        const formData = {
+            car_id: document.getElementById('selected-car-id').value,
+            full_name: document.getElementById('full-name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            pickup_location: document.getElementById('pickup-location').value,
+            pickup_date: document.getElementById('pickup-date').value,
+            return_date: document.getElementById('return-date').value
+        };
+
+        console.log('📦 Données envoyées:', formData);
+
+        // Validation
+        if (!formData.car_id || !formData.full_name || !formData.email || !formData.phone || 
+            !formData.pickup_location || !formData.pickup_date || !formData.return_date) {
+            throw new Error('Veuillez remplir tous les champs');
+        }
+
+        if (new Date(formData.pickup_date) >= new Date(formData.return_date)) {
+            throw new Error('La date de retour doit être après la date de prise en charge');
+        }
+
+        // Envoyer à l'API
+        const response = await fetch('/elayadi-prestigecar/back-end/api/reservation.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+
+        console.log('📡 Statut réponse:', response.status);
+
+        const result = await response.json();
+        console.log('📨 Réponse API:', result);
+
+        if (result.success) {
+            // SUCCÈS
+            const carName = document.getElementById('selected-car').value;
+            alert(`🎉 Merci ${formData.full_name}!\n\nVotre réservation pour la ${carName} a été confirmée.\n📅 Du ${formData.pickup_date} au ${formData.return_date}\n📍 Lieu: ${formData.pickup_location}\n💰 Paiement: Cash à la livraison`);
+            
+            // Reset du formulaire
+            this.reset();
+            document.getElementById('selected-car-id').value = '';
+            document.getElementById('selected-car').value = '';
+            
+            // Retour à l'accueil
+            navigateToPage('home');
+        } else {
+            throw new Error(result.message || 'Erreur lors de la réservation');
+        }
+
+    } catch (error) {
+        console.error('💥 Erreur:', error);
+        alert('❌ Erreur de réservation: ' + error.message);
+    } finally {
+        // Réactiver le bouton
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }
+}
+    </script>
+</body>
+</html>
